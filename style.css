@@ -1,0 +1,530 @@
+*{
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+
+ /* navigation bar starts here  */
+
+
+.navbar{
+
+    background-color: cadetblue;
+    text-align: center;
+    padding: 1% 7%;
+
+
+}
+
+
+.nav-title{
+    margin: 0;
+    padding-top: 10px;
+
+}
+
+
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h2{
+    text-align: center;
+ }
+
+a{
+    /* color: rgb(22, 19, 22); */
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: red;
+}
+
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.nav-menu a{
+    
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: aqua;
+    color: black;
+    border-radius: 15px;
+}
+
+.nav-menu a:hover{
+    background-color: gray;
+}
+
+
+
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+
+/* for mobile */
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ /* navigation bar end here  */
+
+
+
+
+ /* profile section start here */
+
+.profile{
+    padding: 100px 10px;
+    position: relative;
+}
+
+
+.profile-desc h1{
+    font-family: 'Satisfy', cursive;
+}
+
+/* .profile .top-weather-icon{
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    transition: transform 2s;
+} */
+
+
+.fa-solid{
+    position: absolute;
+    /* background-color: #FFFFFF; */
+    color: #000000;
+    right: 50px;
+    font-size: 80px;
+    top: 50px;
+    transition: transform 2s;
+}
+
+.profile .fa-solid:hover{
+    transform: rotate(360deg);
+}
+
+
+.profile .bottom-weather-icon{
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    transition: transform 2s;
+}
+
+
+.profile .bottom-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+
+ /* profile section end here */
+
+
+
+
+ /* about-me section start here */
+    .about-me{
+        background-color: cornflowerblue;
+        text-align: center;
+        padding: 1% 7%;
+        /* color: white; */
+    }
+
+    .dotted-hr{
+        /* text-align: center; */
+        border: dotted 5px  black;
+        border-bottom: none;
+        margin: 20px auto;
+        width: 70px;
+
+    }
+ 
+    .image img{
+        width: 200px;
+        height: 200px;
+        border: 3px solid black;
+        border-radius: 50%;
+    }
+
+    
+    .about-me p{
+        margin: 15px 0;
+    }
+
+    .about-me button{
+        border-radius: 15px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        /* border: none; */
+        background-color: chartreuse;
+        margin: 10px;
+    }
+
+
+
+
+
+    .about-me::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+ /* about-me section end here */
+
+
+
+ /* professional section starts here  */
+
+    .professional-experrience{
+        padding: 10px;
+    }
+
+
+    .card{
+        background-color: slategray;
+        padding: 10px;
+        border-radius: 5px;
+        /* height: 800px; */
+        /* color: white; */
+    }
+
+    .card:hover{
+        box-shadow: 0px 5px 15px 5px black;
+    }
+
+
+    .card-icon{
+        text-align: center;
+    }
+
+    .card-icon img{
+        margin-top: 10px;
+        width: 100px;
+        background-color: crimson;
+    }
+
+    .rounded-image{
+        border: 5px solid white;
+        border-radius: 50%;
+        padding: 15px;
+    }
+
+    .card-title h2{
+        text-align: center;
+        background-color: dimgrey;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+
+    .skill-desc{
+        padding: 10px;
+    }
+
+    .skill-desc li{
+        list-style: none;
+        font-weight: bolder;
+        margin: 30px 10px;
+        text-transform: uppercase;
+        position: relative;
+
+    }
+
+    .skill-desc li::before{
+        content: '';
+        position: absolute;
+        background-color: lightseagreen;
+        opacity: .5;
+        height: 10px;
+        width: 100%;
+        top: calc(100% + 10px);
+        border-radius: 100px;
+    }
+
+    .skill-desc li::after{
+        content: '';
+        position: absolute;
+        background-color: lightseagreen;
+        height: 10px;
+        width: 0;
+        left: 0;
+
+        top: calc(100% + 10px);
+        border-radius: 100px;
+
+
+
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        
+    }
+
+
+    .skill-desc li.html::after{
+        animation-name: html;
+    }
+
+    @keyframes html{
+        to{
+            width: 90%;
+        }
+    }
+
+    .skill-desc li.css::after{
+        animation-name: css;
+    }
+
+    @keyframes css{
+        to{
+            width: 80%;
+        }
+    }
+
+
+    .skill-desc li.javascript::after{
+        animation-name: javascript;
+    }
+
+    @keyframes javascript{
+        to{
+            width: 50%;
+        }
+    }
+
+
+    .skill-desc li.react::after{
+        animation-name: react;
+    }
+
+    @keyframes react{
+        to{
+            width: 65%;
+        }
+    }
+
+
+    .skill-desc li.bootstrap::after{
+        animation-name: bootstrap;
+    }
+
+    @keyframes bootstrap{
+        to{
+            width: 70%;
+        }
+    }
+
+
+    .skill-desc li.nodejs::after{
+        animation-name: nodejs;
+    }
+
+    @keyframes nodejs{
+        to{
+            width: 30%;
+        }
+    }
+
+
+    .skill-desc li.express-js::after{
+        animation-name: express-js;
+    }
+
+    @keyframes express-js{
+        to{
+            width: 45%;
+        }
+    }
+
+
+    .skill-desc li.monoDB::after{
+        animation-name: monoDB;
+    }
+
+    @keyframes monoDB{
+        to{
+            width: 10%;
+        }
+    }
+
+
+
+
+
+
+
+    .professional-experrience::after{
+        clear: both;
+        content: '';
+        display: table;
+    }
+
+
+ /* professional section ends here  */
+
+
+ /* achivement contact starts from here */
+
+ .achivement-contact{
+    padding: 1% 5%;
+    background-color: aquamarine;
+ }
+
+
+
+ .contact{
+    text-align: center;
+ }
+
+ /* .achivement h2{
+    text-align: center;
+ }
+
+ .contact h2{
+    text-align: center;
+ } */
+
+ .contact input, textarea{
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+ }
+
+ .contact button{
+    padding: 15px;
+    font-size: 20px;
+    background-color: chartreuse;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+ }
+
+ .contact button:hover{
+    background-color: coral;
+ }
+
+ .contact-links{
+    text-align: center;
+ }
+
+ 
+ .fa-youtube{
+    color: red;
+ }
+
+ .fa-facebook{
+    color: mediumblue;
+ }
+
+ 
+ .fa-instagram{
+    color: #8a3ab9 ; 
+ }
+
+
+/* 
+ .fa-tiktok{
+    color: white; 
+    background-color: black;
+ } */
+
+ .media-buttons .btn{
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+    width: 50px;
+    margin: 10px;
+    font-size: 32px;
+    border: none;
+
+ }
+ .media-buttons .btn:hover{
+    background-color: gray;
+ }
+
+
+
+
+
+ .achivement-contact::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+
+ /* achivement contact end here */
+
+
+ /* footer section start from here */
+
+.footer{
+    background-color: mediumseagreen;
+    text-align: center;
+}
+
+.footer-menu a{
+    display: block;
+    margin: 15px;
+}
+
+.footer-menu a:hover{
+    color: chartreuse;
+}
+
+
+.love{
+    color: red;
+    font-size: 25px;
+}
+
+.footer::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+
+
+ /* footer section end here */
+
+
+
+
+
+
